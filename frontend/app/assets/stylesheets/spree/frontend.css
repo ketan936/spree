@@ -3,7 +3,5 @@
  *= require normalize
  *= require skeleton
  *= require spree/frontend/screen
- *= require_self
-
- *= require_tree .
+ 
 */
