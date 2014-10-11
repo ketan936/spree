@@ -13,13 +13,13 @@
 		<%= render :partial => 'spree/shared/head' %>
 
 	</head>
-	<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+	<body  data-hook="body">
 
-		<div class="container">
+		<div>
 
 			<%= render :partial => 'spree/shared/header' %>
 
-			<div id="wrapper" class="row" data-hook>
+			<div id="wrapper"  data-hook>
 
 				<%= breadcrumbs(@taxon) %>
 

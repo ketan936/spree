@@ -1,12 +1,27 @@
-<nav class="columns sixteen">
-  <ul id="main-nav-bar" class="inline" data-hook>
-    <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-    <li id="link-to-cart" data-hook>
-      <noscript>
-        <%= link_to Spree.t(:cart), '/cart' %>
-      </noscript>
-      &nbsp;
-    </li>
-    <script>Spree.fetch_cart()</script>
-  </ul>
-</nav>
+<li id="home-link" data-hook>
+	<%= link_to  spree.root_path do %>
+	<i class="fa fa-home"></i> <%= Spree.t(:home)%>
+	<%end%>
+</li>
+<li id="link-to-cart" data-hook>
+	<noscript>
+		<%= link_to Spree.t(:cart), '/cart' %>
+	</noscript>
+	&nbsp;
+</li>
+<script>
+	Spree.fetch_cart()
+
+	$(document).ready(function() {
+
+		temp = $("#nav-bar").children('li')[2];
+		($(temp).find('a')).text("");
+		$($(temp).find('a')).append('<i class="fa fa-user"></i> Account');
+
+		temp = $("#nav-bar").children('li')[3];
+		s = ($(temp).find('a')).text();
+		($(temp).find('a')).text("");
+		$($(temp).find('a')).append('<i class="fa fa-lock"></i> ' + s);
+
+	}); 
+</script>

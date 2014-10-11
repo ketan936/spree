@@ -12,4 +12,4 @@ Spree.fetch_cart = ->
   $.ajax
     url: Spree.pathFor("cart_link"),
     success: (data) ->
-      $('#link-to-cart').html data
+      $('#link-to-cart').html (data)

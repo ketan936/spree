@@ -1,7 +1,12 @@
 <nav id="top-nav-bar" class="columns ten">
-  <ul id="nav-bar" class="inline" data-hook>
-    <li id="search-bar" data-hook>
-      <%= render :partial => 'spree/shared/search' %>
-    </li>
-  </ul>
+	<ul id="nav-bar" class="nav navbar-nav" >
+		<%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+		<li id="search-bar" ></li>
+
+	</ul>
 </nav>
+
+<!--
+<li>
+<%= render :partial => 'spree/shared/search' %>
+</li>-->
